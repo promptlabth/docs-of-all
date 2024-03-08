@@ -25,4 +25,11 @@ erDiagram
         string language_name
     }
 
+    LANGUAGES ||--|{ TONES: is_tones
+    TONES{
+        int id PK 
+        string tone 
+        string language_id FK "FK to LANGUAGES.id"
+    }
+    
 ```
