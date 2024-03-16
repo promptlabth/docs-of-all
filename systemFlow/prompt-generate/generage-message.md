@@ -6,15 +6,20 @@
 sequenceDiagram
     actor req as requestor
     participant gen as generateMessage
-    participant valid as userValidate
-    participant prompt as PROMPT_CONFIG
+    participant firebase as FIREBASE_SERVICE
+    participant valid as USER
+    participant prompt as DB_PROMPT
     participant GPT
     participant GEMINI
     participant kafka as TP_save_history
 
     req ->> gen: POST /v1/prompt-generate
     activate gen
-    gen ->> valid: GET /v1/user/validate
+    gen ->> firebase: send token to check vaidate
+    activate firebase
+    firebase ->> gen : response firebase id and other
+    deactivate firebase
+    gen ->> valid: GetUser
     activate valid
     Note right of valid: get authorize and find firebase_id and stript_id
     valid ->> gen : response firebase_id and stripe_id if found
