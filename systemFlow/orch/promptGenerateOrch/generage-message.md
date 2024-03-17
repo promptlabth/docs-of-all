@@ -1,4 +1,4 @@
-# POST /v1/prompt-generate
+# POST api/v1/prompt-generate
 
 
 ## Sequential Diagram
