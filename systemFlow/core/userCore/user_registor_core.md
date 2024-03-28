@@ -29,3 +29,50 @@ sequenceDiagram
 
 
 ```
+
+## Request
+### Request Schema
+
+
+| Field        | location | Type   | Mandatory(Man/Opt/Cond) | Target | Description                        |
+| ------------ | -------- | ------ | ----------------------- | ------ | ---------------------------------- |
+| firebase_id  | body     | string | M                       | -      | -                                  |
+| email        | body     | string | O                       | -      | -                                  |
+| profile_pic  | body     | string | O                       | -      | -                                  |
+| platform     | body     | string | M                       | -      | Is Possible `gmail` and `facebook` |
+| access_token | body     | string | M                       | -      | -                                  |
+
+### Simple Request
+
+```json
+{
+    "firebase_id": "string",
+    "email": "string",
+    "profile_pic": "facebook.com/img",
+    "platform": "google",
+    "access_token": "hashed-value-token",
+}
+```
+
+
+## Response
+### Response Schema
+
+
+| Field        | location | Type   | Mandatory(Man/Opt/Cond) | Target | Description                        |
+| ------------ | -------- | ------ | ----------------------- | ------ | ---------------------------------- |
+| firebase_id  | body     | string | M                       | -      | -                                  |
+| email        | body     | string | O                       | -      | -                                  |
+| profile_pic  | body     | string | O                       | -      | -                                  |
+| stripe_id    | body     | string | M                       | -      | -                                  |
+
+### Simple Response
+
+```json
+{
+    "firebase_id": "string",
+    "email": "string",
+    "profile_pic": "facebook.com/img",
+    "stripe_id" : "string"
+}
+```
