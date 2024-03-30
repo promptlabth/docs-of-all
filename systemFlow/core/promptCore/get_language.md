@@ -8,7 +8,7 @@ sequenceDiagram
     participant getConfig
     participant prompt as DB_PROMPT
 
-    req ->> getConfig: GET /v1/getConfigOrch/langugaes
+    req ->> getConfig: GET /v1/getConfigCore/langugaes
     activate getConfig
     getConfig ->> prompt: query all languages
     prompt ->> getConfig: query result all languages
