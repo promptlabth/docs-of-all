@@ -3,18 +3,20 @@
 ## Sequential Diagram
 ```mermaid
 sequenceDiagram
+    participant topic as HISTORY_CREATE_TOPIC
     participant consumer as History consumer
     participant prompt as DB_PROMPT
-    participant topic as HISTORY_CREATE_TOPIC
     autonumber
     consumer ->> topic : Consume generated prompt data
-    activate topic
-    topic -->> consumer : Send generated prompt data
-    deactivate topic
+    activate consumer
+    consumer ->> consumer : Unmarshal to get generated prompt data
     consumer ->> prompt : Insert prompt message data
     activate prompt
-    activate consumer
-    prompt ->> consumer : Insert completed
+    prompt -->> consumer : Recevied insert completed message
+    opt if error
+        consumer -->> consumer : log_error to gcp
+    end
+    consumer -->> consumer: mark message and move to next partitions
     deactivate prompt
     deactivate consumer
 
