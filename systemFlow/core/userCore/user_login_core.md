@@ -46,27 +46,27 @@ sequenceDiagram
 
 | Field        | location | Type   | Mandatory(Man/Opt/Cond) | Target | Description |
 | ------------ | -------- | ------ | ----------------------- | ------ | ----------- |
-| firebase_id  | body     | string | M                       | -      | -           |
+| firebaseId  | body     | string | M                       | -      | -           |
 | name         | body     | string | M                       | -      | -           |
 | email        | body     | string | M                       | -      | -           |
-| profile_pic  | body     | string | M                       | -      | -           |
+| profilePic  | body     | string | M                       | -      | -           |
 | platform     | body     | string | M                       | -      | -           |
-| access_token | body     | string | M                       | -      | -           |
-| stripe_id    | body     | string | M                       | -      | -           |
-| plan_id      | body     | string | M                       | -      | -           |
+| accessToken | body     | string | M                       | -      | -           |
+| stripeId    | body     | string | M                       | -      | -           |
+| planId      | body     | string | M                       | -      | -           |
 
 ### Sample Request
 
 ```json
 {
-  "firebase_id": "string",
+  "firebaseId": "string",
   "name":"sirin kub",
   "email":"mamoong.namplawan@gmil.com",
-  "profile_pic":"something",
+  "profilePic":"something",
   "platform":"facebook",
-  "access_token":"a3s4d5f6g7hjkp[6y7uixrctvybuji",
-  "stripe_id":"crtvybuimotgyhujiyujik",
-  "plan_id":"1"
+  "accessToken":"a3s4d5f6g7hjkp[6y7uixrctvybuji",
+  "stripeId":"crtvybuimotgyhujiyujik",
+  "planId":"1"
 }
 ```
 
@@ -76,26 +76,26 @@ sequenceDiagram
 
 | Field        | location | Type   | Mandatory(Man/Opt/Cond) | Target | Description |
 | ------------ | -------- | ------ | ----------------------- | ------ | ----------- |
-| firebase_id  | body     | string | M                       | -      | -           |
+| firebaseId  | body     | string | M                       | -      | -           |
 | name         | body     | string | M                       | -      | -           |
 | email        | body     | string | M                       | -      | -           |
-| profile_pic  | body     | string | M                       | -      | -           |
+| profilePic  | body     | string | M                       | -      | -           |
 | platform     | body     | string | M                       | -      | -           |
-| access_token | body     | string | M                       | -      | -           |
-| stripe_id    | body     | string | M                       | -      | -           |
-| plan_id      | body     | string | M                       | -      | -           |
+| accessToken | body     | string | M                       | -      | -           |
+| stripeId    | body     | string | M                       | -      | -           |
+| planId      | body     | string | M                       | -      | -           |
 
 ### Sample Response
 
 ```json
 {
-  "firebase_id": "string",
+  "firebaseId": "string",
   "name":"sirin kub",
   "email":"mamoong.namplawan@gmil.com",
-  "profile_pic":"something",
+  "profilePic":"something",
   "platform":"facebook",
-  "access_token":"a3s4d5f6g7hjkp[6y7uixrctvybuji",
-  "stripe_id":"crtvybuimotgyhujiyujik",
-  "plan_id":"1"
+  "accessToken":"a3s4d5f6g7hjkp[6y7uixrctvybuji",
+  "stripeId":"crtvybuimotgyhujiyujik",
+  "planId":"1"
 }
 ```
