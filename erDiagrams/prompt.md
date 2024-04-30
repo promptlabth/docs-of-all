@@ -17,7 +17,6 @@ erDiagram
     FEATURES{
         int id PK
         string name "name of the feature" 
-        string url "url to feature (deprecated)"
     }
     PROMPT_CONFIGS }o--|| LANGUAGES: of_language
     LANGUAGES{
