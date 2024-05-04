@@ -1,4 +1,4 @@
-# TABLE config_prompt
+# TABLE config_prompts
 ---
 ```mermaid 
 erDiagram
