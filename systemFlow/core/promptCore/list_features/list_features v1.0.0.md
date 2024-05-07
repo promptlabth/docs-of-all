@@ -21,7 +21,7 @@ sequenceDiagram
     participant getConfig
     participant prompt as PROMPTY_CONFIG
 
-    req ->> getConfig : Get prompt input
+    req ->> getConfig : Get features
     activate getConfig
     getConfig ->> prompt : query all features
     activate prompt
