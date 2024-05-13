@@ -71,11 +71,12 @@ sequenceDiagram
 | `data`.`languages[]`.`languageName` | string | M                |        |             |
 | `data`.`tones[]`                    | array  | M                |        |             |
 | `data`.`tones[]`.`id`               | int    | M                |        |             |
-| `data`.`tones[]`.`toneName`         | string | M                |        |             |
+| `data`.`tones[]`.`name`             | string | M                |        |             |
 | `data`.`tones[]`.`languageId`       | int    | M                |        |             |
 | `data`.`features[]`                 | array  | M                |        |             |
 | `data`.`features[]`.`id`            | int    | M                |        |             |
-| `data`.`features[]`.`featureName`   | string | M                |        |             | 
+| `data`.`features[]`.`name`          | string | M                |        |             |
+| `data`.`features[]`.`path`          | string | M                |        |             |
 
 ### Sample Response
 ```json
@@ -100,7 +101,7 @@ sequenceDiagram
         "tones": [
             {
                 "id" : 1,
-                "toneName" : "สนุกสนาน",
+                "name" : "สนุกสนาน",
                 "languageId": 1
             },
             {
@@ -112,12 +113,9 @@ sequenceDiagram
         "features": [
             {
                 "id" : 1,
-                "featureName": "เขียนแคปชั่นขายของ"
+                "name": "เขียนแคปชั่นขายของ",
+                "path": "/createSellingPost"
             },
-            {
-                "id" : 2,
-                "featureName": "เขียนบทความ"
-            }
         ]
     }
 }
@@ -130,7 +128,8 @@ sequenceDiagram
 | `data`.`languages[]`.`id`           |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`id`           |        |
 | `data`.`languages[]`.`languageName` |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`languageName` |        |
 | `data`.`tones[]`.`id`               |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`id`           |        |
-| `data`.`tones[]`.`toneName`         |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`toneName`     |        |
+| `data`.`tones[]`.`name`             |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`name`         |        |
 | `data`.`tones[]`.`languageId`       |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`languageId`   |        |
 | `data`.`features[]`.`id`            |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`id`           |        |
-| `data`.`features[]`.`featureName`   |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`featureName`  |        |
+| `data`.`features[]`.`name`          |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`name`         |        |
+| `data`.`features[]`.`path`          |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`path`         |        |
