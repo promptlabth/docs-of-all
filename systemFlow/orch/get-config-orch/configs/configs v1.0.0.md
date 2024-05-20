@@ -122,14 +122,14 @@ sequenceDiagram
 ```
 
 ## Field to Field Mapping 
-### Field mapping when call [GRPC ListLangugages]()
+### Field mapping when call [GET /api/v1/prompt-core/configs]()
 | Target Field Name                   | Location | Tranformation | Mandatory (M/O/C) | Target                                             | Remark |
 | ----------------------------------- | -------- | ------------- | ----------------- | -------------------------------------------------- | ------ |
-| `data`.`languages[]`.`id`           |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`id`           |        |
-| `data`.`languages[]`.`languageName` |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`languageName` |        |
-| `data`.`tones[]`.`id`               |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`id`           |        |
-| `data`.`tones[]`.`name`             |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`name`         |        |
-| `data`.`tones[]`.`languageId`       |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`languageId`   |        |
-| `data`.`features[]`.`id`            |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`id`           |        |
-| `data`.`features[]`.`name`          |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`name`         |        |
-| `data`.`features[]`.`path`          |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`path`         |        |
+| `data`.`languages[]`.`id`           |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`data`.`id`           |        |
+| `data`.`languages[]`.`languageName` |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`data`.`languageName` |        |
+| `data`.`tones[]`.`id`               |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`data`.`id`           |        |
+| `data`.`tones[]`.`name`             |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`data`.`name`         |        |
+| `data`.`tones[]`.`languageId`       |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`data`.`languageId`   |        |
+| `data`.`features[]`.`id`            |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`data`.`id`           |        |
+| `data`.`features[]`.`name`          |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`data`.`name`         |        |
+| `data`.`features[]`.`path`          |          | Direct        | M                 | [GET /api/v1/prompt-core/configs]().`data`.`path`         |        |
