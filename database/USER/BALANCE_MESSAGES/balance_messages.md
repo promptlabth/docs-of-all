@@ -1,7 +1,7 @@
 # TABLE balance_messages
 
 ---
-```mermaind
+```mermaid
 erDiagram
     BALANCES_MESSAGES{
         string firebase_id "use a firebase id"
