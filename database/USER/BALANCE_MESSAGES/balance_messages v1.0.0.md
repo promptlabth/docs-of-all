@@ -1,4 +1,4 @@
-# TABLE balance_messages
+# TABLE balance_messages v1.0.0
 
 ---
 ```mermaid
