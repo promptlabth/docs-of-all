@@ -3,15 +3,17 @@
     erDiagram
     USERS }o--|| PLANS : have_plan
     USERS {
-        string firebase_id PK "get from firebase api"
-        string name 
-        string email "when user sign-up to website will add email"
-        string profile_pic
-        string platform
-        string access_token "a access token to access to platform"
-        string stripe_id "is a customer id for get plan from stripe"
-        int plan_id FK "FK to plan.id"
-        datetime datetime_last_active "is a last active of user (should move to unix)"
+
+        string firebase_id PK "ID of the user"
+        string name "Name of user"
+        string email "User's email"
+        string profile_picture "Url of user's profile picture"
+        enum platform "facebook | gmail"
+        text access_token "Access token received from firebase authentication"
+        string customer_id "Stripe id of subscribed user"
+        datetime created_date   "Datetime the user firstly login"
+        datetime last_active "Datetime the user recently login"
+        int plan_id FK "Plan ID of the user"
     }
     PLANS{
         int id PK 
