@@ -2,7 +2,7 @@
 
 | Name                     | Detail                                                              |
 | ------------------------ | ------------------------------------------------------------------- |
-| **Overview**             | update count of balance message when generating message is completed |
+| **Overview**             | inquiry a account of user when `landing` and `login` to promptlabai |
 | **Layer**                | `Core`                                                              |
 | **Microservice**         | `user-core`                                                         |
 | **Related to Service**   | `DB_USER`                                                           |
