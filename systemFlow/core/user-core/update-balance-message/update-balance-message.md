@@ -79,5 +79,13 @@ sequenceDiagram
 }
 ```
 
-### Dicussing
+## Field to Field Mapping 
+
+### Field mapping when update [DB_USER TABLE balance_messages]()
+| Target Field Name       | Location | Tranformation | Mandatory | Source                                               | Remark |
+| ----------------------- | -------- | ------------- | --------- | ---------------------------------------------------- | ------ |
+| `data`.`firebaseId`     |          | Direct        | M         | [DB_USER TABLE balance_messages]().`firebase_id`     |        |
+| `data`.`balanceMessage` |          | Direct        | M         | [DB_USER TABLE balance_messages]().`balance_message` |        |
+
+## Dicussing
 * ตอนเพิ่มจำนวน balance messages prompt generate orch จะ call API เส้นนี้ตอนไหน 
