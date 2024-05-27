@@ -109,15 +109,15 @@ sequenceDiagram
 
 ## Field to Field Mapping
 
-### Field mapping when Inquiry [DB_PROMPT TABLE prompt_configs]()
+### Field mapping when Inquiry [DB_PROMPT TABLE prompt_configs](https://github.com/promptlabth/docs-of-all/blob/main/database/PROMPT/prompt_config.md)
 
-| Target Field Name     | Location | Tranformation | Mandatory | Source                                            | Remark |
-| --------------------- | -------- | ------------- | --------- | ------------------------------------------------- | ------ |
-| `data`.`id`           |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs]().`id`           |        |
-| `data`.`prompt_input` |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs]().`prompt_input` |        |
-| `data`.`model_id`     |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs]().`model_id`     |        |
-| `data`.`feature_id`   |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs]().`feature_id`   |        |
-| `data`.`language_id`  |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs]().`language_id`  |        |
+| Target Field Name     | Location | Tranformation | Mandatory | Source                                                                                                                                 | Remark |
+| --------------------- | -------- | ------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `data`.`id`           |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs](https://github.com/promptlabth/docs-of-all/blob/main/database/PROMPT/prompt_config.md).`id`           |        |
+| `data`.`prompt_input` |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs](https://github.com/promptlabth/docs-of-all/blob/main/database/PROMPT/prompt_config.md).`prompt_input` |        |
+| `data`.`model_id`     |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs](https://github.com/promptlabth/docs-of-all/blob/main/database/PROMPT/prompt_config.md).`model_id`     |        |
+| `data`.`feature_id`   |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs](https://github.com/promptlabth/docs-of-all/blob/main/database/PROMPT/prompt_config.md).`feature_id`   |        |
+| `data`.`language_id`  |          | Direct        | M         | [DB_PROMPT TABLE prompt_configs](https://github.com/promptlabth/docs-of-all/blob/main/database/PROMPT/prompt_config.md).`language_id`  |        |
 
 ## Dicussing
 
