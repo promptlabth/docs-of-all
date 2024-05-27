@@ -17,7 +17,7 @@ erDiagram
 
 | Column name    | type    | Length | Constraints | Nullable | Remark                           |
 | -------------- | ------- | ------ | ----------- | -------- | -------------------------------- |
-| `id`           | VARCHAR | 36     | PRIMARY KEY | N        | UUID                             |
+| `id`           | VARCHAR | 36     | PRIMARY KEY |          | UUID                             |
 | `prompt_input` | VARCHAR | 255    |             | N        |                                  |
 | `model_id`     | INT     |        | FOREING KEY | N        | Modle ID of the prompt_config    |
 | `feature_id`   | INT     |        | FOREING KEY | N        | Feature ID of the prompt_config  |
