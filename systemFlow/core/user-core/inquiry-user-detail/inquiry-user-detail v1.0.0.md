@@ -40,7 +40,7 @@ sequenceDiagram
             user-core ->> requestor: response 200 with code 4004 data not found
         end
 
-        user-core->>db_user: SELECT maxMessage from plans where id=plan_id
+        user-core->>db_user: SELECT max_message from plans where id=plan_id
         activate db_user
             db_user ->> user-core: response language_id
         deactivate db_user
@@ -128,27 +128,26 @@ sequenceDiagram
 
 ## Field to Field Mapping
 
-### Field mapping when Inquiry [DB_USER TABLE users]()
+### Field mapping when Inquiry [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md)
 
-| Target Field Name        | Location | Tranformation | Mandatory | Source                                    | Remark |
-| ------------------------ | -------- | ------------- | --------- | ----------------------------------------- | ------ |
-| `data`.`firebase_id`     |          | Direct        | M         | [DB_USER TABLE users]().`firebase_id`     |        |
-| `data`.`name`            |          | Direct        | M         | [DB_USER TABLE users]().`name`            |        |
-| `data`.`email`           |          | Direct        | M         | [DB_USER TABLE users]().`email`           |        |
-| `data`.`profile_picture` |          | Direct        | M         | [DB_USER TABLE users]().`profile_picture` |        |
-| `data`.`access_token`    |          | Direct        | M         | [DB_USER TABLE users]().`access_token`    |        |
-| `data`.`customer_id`     |          | Direct        | M         | [DB_USER TABLE users]().`customer_id`     |        |
-| `data`.`created_date`    |          | Direct        | M         | [DB_USER TABLE users]().`created_date`    |        |
-| `data`.`last_active`     |          | Direct        | M         | [DB_USER TABLE users]().`last_active`     |        |
-| `data`.`plan_id`         |          | Direct        | M         | [DB_USER TABLE users]().`plan_id`         |        |
+| Target Field Name        | Location | Tranformation | Mandatory | Source                                                                                                              | Remark |
+| ------------------------ | -------- | ------------- | --------- | ------------------------------------------------------------------------------------------------------------------- | ------ |
+| `data`.`firebase_id`     |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`firebase_id`     |        |
+| `data`.`name`            |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`name`            |        |
+| `data`.`email`           |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`email`           |        |
+| `data`.`profile_picture` |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`profile_picture` |        |
+| `data`.`access_token`    |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`access_token`    |        |
+| `data`.`customer_id`     |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`customer_id`     |        |
+| `data`.`created_date`    |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`created_date`    |        |
+| `data`.`last_active`     |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`last_active`     |        |
+| `data`.`plan_id`         |          | Direct        | M         | [DB_USER TABLE users](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/USER.md).`plan_id`         |        |
 
-### Field mapping when Inquiry [DB_USER TABLE balance_messages]()
+### Field mapping when Inquiry [DB_USER TABLE balance_messages](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/BALANCE_MESSAGES/balance_messages%20v1.0.0.md)
 
-| Target Field Name        | Location | Tranformation | Mandatory | Source                                               | Remark |
-| ------------------------ | -------- | ------------- | --------- | ---------------------------------------------------- | ------ |
-| `data`.`firebase_id`     |          | Direct        | M         | [DB_USER TABLE balance_messages]().`firebase_id`     |        |
-| `data`.`balance_message` |          | Direct        | M         | [DB_USER TABLE balance_messages]().`balance_message` |        |
-
+| Target Field Name        | Location | Tranformation | Mandatory | Source                                                                                                                                                               | Remark |
+| ------------------------ | -------- | ------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| `data`.`firebase_id`     |          | Direct        | M         | [DB_USER TABLE balance_messages](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/BALANCE_MESSAGES/balance_messages%20v1.0.0.md).`firebase_id`     |        |
+| `data`.`balance_message` |          | Direct        | M         | [DB_USER TABLE balance_messages](https://github.com/promptlabth/docs-of-all/blob/main/database/USER/BALANCE_MESSAGES/balance_messages%20v1.0.0.md).`balance_message` |        |
 
 ## Dicussing
 
