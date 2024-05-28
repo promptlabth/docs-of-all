@@ -27,7 +27,7 @@ sequenceDiagram
     prompt-core ->> prompt-core : get toneId, featureId, modelId from url
     alt IF failed to get parameter
         prompt-core-->> prompt-core: Log error to gcp
-        prompt-core -->> requestor : response 200 with code 4000 bad request
+        prompt-core ->> requestor : response 200 with code 4000 bad request
     end
 
     prompt-core->>db_prompt: SELECT tone_name, language_id from tones where id=toneId
@@ -107,6 +107,14 @@ sequenceDiagram
 }
 ```
 
+#### When get toneId, featureId, modelId from url is failed
+
+```json
+{
+  "status": 200,
+  "code": 4000,
+  "message": "bad request"
+}
 ## Field to Field Mapping
 
 ### Field mapping when Inquiry [DB_PROMPT TABLE prompt_configs](https://github.com/promptlabth/docs-of-all/blob/main/database/PROMPT/prompt_config.md)
